@@ -16,7 +16,9 @@
 
     public static function load_firebase_js() {
       self::$options = get_option("firebase_credentials");
-      wp_enqueue_script( 'firebase_app', 'https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js', array(), FIREBASE_WP_VERSION, false );      
+      wp_enqueue_script( 'firebase_app', 'https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js', array(), FIREBASE_WP_VERSION, false );
+      wp_enqueue_script( 'firebase_auth', 'https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js', array(), FIREBASE_WP_VERSION, false );      
+
       wp_enqueue_script( 'firebase', plugin_dir_url( dirname(__FILE__) ) . 'js/firebase.js', array('jquery'), FIREBASE_WP_VERSION, false );
       wp_localize_script( 'firebase', 'firebaseOptions', array(
                'apiKey'       => self::$options['api_key'],

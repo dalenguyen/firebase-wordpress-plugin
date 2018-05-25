@@ -15,7 +15,7 @@
  * Author URI:   http://dalenguyen.me
  * Contributors: Dale Nguyen (@dalenguyen)
  *
- * Version:      0.1.0
+ * Version:      0.2.0
  *
  * Text Domain:  firebase
  *
