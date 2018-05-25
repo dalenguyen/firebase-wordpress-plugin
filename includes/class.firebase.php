@@ -1,0 +1,30 @@
+<?php
+  class Firebase {
+    private static $initiated = false;
+    private static $options;
+
+    public static function init() {
+      if( ! self::$initiated ){
+        self::init_hooks();
+      }
+    }
+
+    public static function init_hooks() {
+      self::$initiated = true;
+      add_action( 'wp_enqueue_scripts', array( 'Firebase', 'load_firebase_js' ) );
+    }
+
+    public static function load_firebase_js() {
+      self::$options = get_option("firebase_credentials");
+      wp_enqueue_script( 'firebase_app', 'https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js', array(), FIREBASE_WP_VERSION, false );      
+      wp_enqueue_script( 'firebase', plugin_dir_url( dirname(__FILE__) ) . 'js/firebase.js', array('jquery'), FIREBASE_WP_VERSION, false );
+      wp_localize_script( 'firebase', 'firebaseOptions', array(
+               'apiKey'       => self::$options['api_key'],
+               'authDomain'   => self::$options['auth_domain'],
+               'databaseURL'  => self::$options['database_url'],
+               'projectId'    => self::$options['project_id']
+           )
+       );
+    }
+  }
+?>

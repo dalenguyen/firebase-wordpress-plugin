@@ -57,6 +57,9 @@ define( 'FIREBASE_WP_VERSION', '0.1.0' );
 define( 'FIREBASE_WP__MINIMUM_WP_VERSION', '4.0.0' );
 define( 'FIREBASE_WP__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
+require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase.php';
+add_action( 'init', array( 'Firebase', 'init' ));
+
 // Load plugins files
 if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
   require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase-admin.php';

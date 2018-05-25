@@ -6,7 +6,6 @@
 
 class Firebase_Admin{
   private static $initiated = false;
-
   private static $options;
 
   public static function init(){
