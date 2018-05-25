@@ -1,7 +1,6 @@
 (function( $ ) {
   'use strict';
 
-  console.log('firebase added!');
   if(typeof window.firebaseOptions !== 'undefined'){
     // console.log(window.firebaseOptions);
 
@@ -13,19 +12,17 @@
     $(document).ready(function(){
       // Check user state
       checkUserState().then(loggedin => {
-          console.log(loggedin);
           if(loggedin){
-              $('#webcam').show();
+              $('#firebase-show').show();
               showGreetings();
           } else {
-              $('#webcam').hide();
+              $('#firebase-show').hide();
           }
       })
 
       // Firebase login
       $("#form-submit").click(function(event){
-        event.preventDefault();
-        console.log('ready to login');
+        event.preventDefault();        
         let data = $('#login-form :input').serializeArray();
         let email = data[0].value;
         let password = data[1].value;
@@ -34,7 +31,7 @@
         if(email !== '' && password !== ''){
             firebase.auth().signInWithEmailAndPassword(email, password)
             .then(() => {
-                $('#webcam').show();
+                $('#firebase-show').show();
                 showGreetings();
             })
             .catch( error => {
@@ -51,7 +48,7 @@
           e.preventDefault();
           firebase.auth().signOut()
           .then(() => {
-              $('#webcam').hide();
+              $('#firebase-show').hide();
           })
           .catch(error => console.log(error))
       })
@@ -75,7 +72,12 @@
           firebase.auth().onAuthStateChanged(function (user) {
               if (user) {
                   // User is signed in.
-                  $('#firebase-user').text(`Greeting ${user.email}!`);
+                  if(user.displayName === null){
+                    $('#firebase-user').text(`Greetings, ${user.email}!`);
+                  } else {
+                    $('#firebase-user').text(`Greetings, ${user.displayName}!`);
+                  }
+
               } else {
                 $('#firebase-user').hide();
               }

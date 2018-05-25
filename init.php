@@ -60,6 +60,9 @@ define( 'FIREBASE_WP__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase.php';
 add_action( 'init', array( 'Firebase', 'init' ));
 
+require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.shortcodes.php';
+add_action( 'init', array( 'Firebase_Shortcode', 'init' ));
+
 // Load plugins files
 if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
   require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase-admin.php';
