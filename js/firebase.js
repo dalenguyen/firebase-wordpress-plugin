@@ -1,8 +1,7 @@
 (function( $ ) {
   'use strict';
 
-  if(typeof window.firebaseOptions !== 'undefined'){
-    // console.log(window.firebaseOptions);
+  if(typeof window.firebaseOptions !== 'undefined'){    
 
     // Initialize FirebaseApp
     if (!firebase.apps.length) {
@@ -22,7 +21,7 @@
 
       // Firebase login
       $("#form-submit").click(function(event){
-        event.preventDefault();        
+        event.preventDefault();
         let data = $('#login-form :input').serializeArray();
         let email = data[0].value;
         let password = data[1].value;
@@ -44,7 +43,6 @@
 
       // Sign out action
       $('#firebase-signout').on('click', e => {
-          console.log('Start loggint out!');
           e.preventDefault();
           firebase.auth().signOut()
           .then(() => {
@@ -84,5 +82,7 @@
           })
       }
     })
+  } else {
+    console.warn('Please enter your Firebase settings!');
   }
 })( jQuery )

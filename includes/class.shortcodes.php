@@ -18,7 +18,7 @@
 
     public static function firebase_login_func() {
       $html = "";
-      $html .= "<form id=login-form'>";
+      $html .= "<form id='login-form'>";
           $html .= "<div>";
               $html .= "<div>";
                   $html .= "<label for='name'>Name</label>";
@@ -33,14 +33,14 @@
               $html .= "</div>";
           $html .= "</div>";
 
-          $html .= "<button id='form-submit'>Login</button>";
+          $html .= "<button id='form-submit' class='firebase-btn'>Login</button>";
       $html .= "</form>";
       return $html;
     }
 
     public static function firebase_logout_func() {
       $html = "";
-      $html .= "<button id='firebase-signout'>Sign Out</button>";
+      $html .= "<button id='firebase-signout' class='firebase-btn'>Sign Out</button>";
       return $html;
     }
 
@@ -50,10 +50,11 @@
       return $html;
     }
 
-    public static function firebase_show_func($atts) {
+    public static function firebase_show_func($atts, $content) {
+      $class_name = $atts['class'];
       $html = "";
-      $html .= "<div id='firebase-user'>";
-      $html .= $atts['content'];
+      $html .= "<div id='firebase-user' class='$class_name'>";
+      $html .= $content;
       $html .= "</div>";
       return $html;
     }

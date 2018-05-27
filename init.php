@@ -53,7 +53,7 @@ if ( !function_exists( 'add_action' ) ) {
  	exit;
 }
 
-define( 'FIREBASE_WP_VERSION', '0.1.0' );
+define( 'FIREBASE_WP_VERSION', '0.2.0' );
 define( 'FIREBASE_WP__MINIMUM_WP_VERSION', '4.0.0' );
 define( 'FIREBASE_WP__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
