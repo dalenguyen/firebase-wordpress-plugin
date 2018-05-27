@@ -18,7 +18,7 @@
 
     public static function firebase_login_func() {
       $html = "";
-      $html .= "<form id='login-form'>";
+      $html .= "<form id='firebase-login-form'>";
           $html .= "<div>";
               $html .= "<div>";
                   $html .= "<label for='name'>Name</label>";
@@ -33,7 +33,7 @@
               $html .= "</div>";
           $html .= "</div>";
 
-          $html .= "<button id='form-submit' class='firebase-btn'>Login</button>";
+          $html .= "<button id='firebase-form-submit' class='firebase-btn'>Login</button>";
       $html .= "</form>";
       return $html;
     }

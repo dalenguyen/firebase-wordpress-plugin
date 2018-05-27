@@ -1,7 +1,7 @@
 (function( $ ) {
   'use strict';
 
-  if(typeof window.firebaseOptions !== 'undefined'){    
+  if(typeof window.firebaseOptions !== 'undefined'){
 
     // Initialize FirebaseApp
     if (!firebase.apps.length) {
@@ -20,9 +20,9 @@
       })
 
       // Firebase login
-      $("#form-submit").click(function(event){
+      $("#firebase-form-submit").click(function(event){
         event.preventDefault();
-        let data = $('#login-form :input').serializeArray();
+        let data = $('#firebase-login-form :input').serializeArray();
         let email = data[0].value;
         let password = data[1].value;
 
