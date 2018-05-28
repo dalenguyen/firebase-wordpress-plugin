@@ -1,15 +1,15 @@
-=== Firebase for WordPress ===
+=== Integrate Firebase ===
 Contributors:      hanthuy
 Donate link:       https://www.paypal.me/DaleNguyen
 Tags:              firebase, wordpress
 Requires at least: 3.8.0
 Tested up to:      4.9.6
-Stable tag:        0.2.0
+Stable tag:        0.2.1
 Requires PHP:      5.2.4
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
-Firebase WordPress is a plugin that helps to integrate Firebase features to WordPress
+Integrate Firebase is a plugin that helps to integrate Firebase features to WordPress
 
 == Description ==
 
@@ -24,13 +24,13 @@ The Firebase for WordPress Plugin will help to you allow user to login to your W
 
 If installing the plugin from wordpress.org:
 
-1. Upload the entire `/firebase-for-wordpress` directory to the `/wp-content/plugins/` directory.
-2. Activate Firebase WordPress Plugin through the 'Plugins' menu in WordPress.
+1. Upload the entire `/integrate-firebase` directory to the `/wp-content/plugins/` directory.
+2. Activate Integrate Firebase Plugin through the 'Plugins' menu in WordPress.
 3. Profit.
 
 == Frequently Asked Questions ==
 
-= What can I do with this Firebase for WordPress plugin? =
+= What can I do with this Integrate Firebase plugin? =
 
 At version 0.2.0, user can integrate Firebase authentication to WordPress. That means you can log in, log out and show data only to logged in users.
 
@@ -54,11 +54,21 @@ You can put your data as an HTML code inside a shortcode
 
 > echo do_shortcode("[firebase_show class='your-class-name']YOUR HTML CODE[/firebase_show]");
 
+= How can I log out?
+
+This is a shortcode for log out button.
+
+> echo do_shortcode("[firebase_logout]");
+
 == Screenshots ==
 
 1. After activating the plugin, you need enter Firebase credentials under Setting > Firebase.
 
 == Changelog ==
+
+= 0.2.1 =
+* Change plugin name
+* Update logout shortcode
 
 = 0.2.0 =
 * Add scripts & styles

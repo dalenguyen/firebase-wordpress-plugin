@@ -3,21 +3,21 @@
  * The initation loader for Firebase, and the main plugin file.
  *
  * @category     WordPress_Plugin
- * @package      firebase-wordpress
+ * @package      integrate-firebase
  * @author       dalenguyen
  * @license      GPL-2.0+
  * @link         https://github.com/dalenguyen/firebase-wordpress-plugin
  *
- * Plugin Name:  Firebase for WordPress
+ * Plugin Name:  Integrate Firebase
  * Plugin URI:   https://github.com/dalenguyen/firebase-wordpress-plugin
- * Description:  Firebase WordPress is a plugin that helps to integrate Firebase features to WordPress
+ * Description:  Integrate Firebase is a plugin that helps to integrate Firebase features to WordPress
  * Author:       dalenguyen
  * Author URI:   http://dalenguyen.me
  * Contributors: Dale Nguyen (@dalenguyen)
  *
  * Version:      0.2.0
  *
- * Text Domain:  firebase
+ * Text Domain:  integrate-firebase
  *
  *
  * Released under the GPL license
