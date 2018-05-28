@@ -6,7 +6,7 @@ Donate link:       https://www.paypal.me/DaleNguyen
 
 Tags:              firebase, wordpress
 
-Requires at least: 3.8.0
+Requires at least: 4.0.0
 
 Tested up to:      4.9.6
 
