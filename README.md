@@ -22,7 +22,7 @@ Integrate Firebase is a plugin that helps to integrate Firebase features to Word
 
 ## Description
 
-The Integrate Firebase Plugin will help to you allow user to login to your WordPress interface - not to WordPress dashboard - from Google Firebase authentication. You can show info of logged in show and able to show data that is only available to your firebase's users.
+The Integrate Firebase Plugin will help a Firebase user to login to your WordPress interface - not to WordPress dashboard - from Firebase authentication. You can show user info display data that is only available to your Firebase users.
 
 ### Links
 
@@ -41,9 +41,9 @@ If installing the plugin from wordpress.org:
 
 ### What can I do with this Integrate Firebase plugin?
 
-At version 0.2.0, user can integrate Firebase authentication to WordPress. That means you can log in, log out and show data only to logged in users.
+At version 0.2.2, a user can integrate Firebase authentication to WordPress. That means you can log in, log out and show data only to logged in users.
 
-### How can I add login form to WordPress?
+### How can I add a login form to WordPress?
 
 After adding Firebase credentials from Settings > Firebase. You can add login form through shortcodes:
 
@@ -61,7 +61,7 @@ You can add a shortcode to show user's info
 echo do_shortcode("[firebase_greetings]");
 ```
 
-### How can I hide or show data for logged user?
+### How can I hide or show data for a logged in user?
 
 You can put your data as an HTML code inside a shortcode
 
@@ -85,12 +85,19 @@ echo do_shortcode("[firebase_logout]");
 
 ## Changelog
 
+### 0.2.2
+* Fixed readme typos
+
+### 0.2.1
+* Change plugin name
+* Update logout shortcode
+
 ### 0.2.0
 * Add scripts & styles
 * Allow to show and hide data after login
 
 ### 0.1.0
-* Started the project and add authentication method
+* Started the project and add an authentication method
 
 ## Upgrade Notice
 

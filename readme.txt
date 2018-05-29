@@ -1,7 +1,7 @@
 === Integrate Firebase ===
 Contributors:      hanthuy
 Donate link:       https://www.paypal.me/DaleNguyen
-Tags:              firebase, wordpress
+Tags:              firebase
 Requires at least: 4.0.0
 Tested up to:      4.9.6
 Stable tag:        0.2.1
@@ -13,7 +13,7 @@ Integrate Firebase is a plugin that helps to integrate Firebase features to Word
 
 == Description ==
 
-The Firebase for WordPress Plugin will help to you allow user to login to your WordPress interface - not to WordPress dashboard - from Google Firebase authentication. You can show info of logged in show and able to show data that is only available to your firebase's users.
+The Firebase for WordPress Plugin will help a Firebase user to login to your WordPress interface - not to WordPress dashboard - from Firebase authentication. You can show user info and display data that is only available to your Firebase users.
 
 = Links =
 
@@ -32,9 +32,9 @@ If installing the plugin from wordpress.org:
 
 = What can I do with this Integrate Firebase plugin? =
 
-At version 0.2.0, user can integrate Firebase authentication to WordPress. That means you can log in, log out and show data only to logged in users.
+At version 0.2.0, the user can integrate Firebase authentication to WordPress. That means you can log in, log out and show data only to logged in users.
 
-= How can I add login form to WordPress? =
+= How can I add a login form to WordPress? =
 
 After adding Firebase credentials from Settings > Firebase. You can add login form through shortcodes:
 
@@ -48,7 +48,7 @@ You can add a shortcode to show user's info
 
 > echo do_shortcode("[firebase_greetings]");
 
-= How can I hide or show data for logged user? =
+= How can I hide or show data for a logged in user? =
 
 You can put your data as an HTML code inside a shortcode
 
@@ -65,6 +65,9 @@ This is a shortcode for log out button.
 1. After activating the plugin, you need enter Firebase credentials under Setting > Firebase.
 
 == Changelog ==
+
+= 0.2.2 =
+* Fixed readme typos
 
 = 0.2.1 =
 * Change plugin name
