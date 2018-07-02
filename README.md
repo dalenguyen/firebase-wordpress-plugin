@@ -89,6 +89,7 @@ echo do_shortcode("[firebase_logout]");
 ![Firebase Settings](/assets/screenshot-1.png)
 
 2. Please enter collection names in order to show the data from Real Time Database
+
 ![Database Settings](/assets/screenshot-2.png)
 
 ## Changelog
