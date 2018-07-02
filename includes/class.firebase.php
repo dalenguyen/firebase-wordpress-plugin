@@ -1,7 +1,7 @@
 <?php
   class Firebase {
     private static $initiated = false;
-    private static $options;
+    private static $options;    
 
     public static function init() {
       if( ! self::$initiated ){
@@ -15,7 +15,6 @@
     }
 
     public static function load_firebase_js() {
-      self::$options = get_option("firebase_credentials");
 
       wp_enqueue_style( 'firebase', plugin_dir_url( dirname(__FILE__) ) . 'css/firebase.css' );
 

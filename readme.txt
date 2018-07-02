@@ -32,7 +32,10 @@ If installing the plugin from wordpress.org:
 
 = What can I do with this Integrate Firebase plugin? =
 
-At version 0.2.0, the user can integrate Firebase authentication to WordPress. That means you can log in, log out and show data only to logged in users.
+At version 0.3.0, the user can integrate Firebase authentication to WordPress. That means you can:
+
+* log in, log out and show data only to logged in users.
+*  Get Real Time database in Dashboard
 
 = How can I add a login form to WordPress? =
 
@@ -63,8 +66,13 @@ This is a shortcode for log out button.
 == Screenshots ==
 
 1. After activating the plugin, you need enter Firebase credentials under Setting > Firebase.
+2. Please enter collection names in order to show the data from Real Time Database
 
 == Changelog ==
+
+= 0.3.0 =
+* Added about information
+* Added Real Time database support in Dashboard
 
 = 0.2.2 =
 * Fixed readme typos
