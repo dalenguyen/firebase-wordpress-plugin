@@ -11,6 +11,8 @@
 
     public static function init_hooks() {
       self::$initiated = true;
+      self::$options = get_option("firebase_credentials");
+    
       add_action( 'wp_enqueue_scripts', array( 'Firebase', 'load_firebase_js' ) );
     }
 
