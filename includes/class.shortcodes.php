@@ -21,14 +21,14 @@
       $html .= "<form id='firebase-login-form'>";
           $html .= "<div>";
               $html .= "<div>";
-                  $html .= "<label for='name'>Name</label>";
+                  $html .= "<label for='name'>E-mail</label>";
                   $html .= "<input type='email' name='email'>";
               $html .= "</div>";
           $html .= "</div>";
 
           $html .= "<div>";
               $html .= "<div>";
-                  $html .= "<label for='email'>Email</label>";
+                  $html .= "<label for='email'>Password</label>";
                   $html .= "<input type='password' name='password'>";
               $html .= "</div>";
           $html .= "</div>";
