@@ -51,9 +51,12 @@
     }
 
     public static function firebase_show_func($atts, $content) {
-      $class_name = $atts['class'];
+      $class_name = "";
+      if(isset($atts['class'])){
+        $class_name = $atts['class'];
+      }
       $html = "";
-      $html .= "<div id='firebase-user' class='$class_name'>";
+      $html .= "<div class='firebase-show $class_name'>";
       $html .= $content;
       $html .= "</div>";
       return $html;

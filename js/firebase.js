@@ -12,10 +12,10 @@
       // Check user state
       checkUserState().then(loggedin => {
           if(loggedin){
-              $('#firebase-show').show();
+              $('.firebase-show').show();
               showGreetings();
           } else {
-              $('#firebase-show').hide();
+              $('.firebase-show').hide();
           }
       })
 
@@ -30,7 +30,7 @@
         if(email !== '' && password !== ''){
             firebase.auth().signInWithEmailAndPassword(email, password)
             .then(() => {
-                $('#firebase-show').show();
+                $('.firebase-show').show();
                 showGreetings();
             })
             .catch( error => {
@@ -46,7 +46,7 @@
           e.preventDefault();
           firebase.auth().signOut()
           .then(() => {
-              $('#firebase-show').hide();
+              $('.firebase-show').hide();
           })
           .catch(error => console.log(error))
       })
