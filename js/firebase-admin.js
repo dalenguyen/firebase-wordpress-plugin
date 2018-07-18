@@ -11,11 +11,19 @@
     $(document).ready(function(){
       let db;
       let collections;
+
       if(window.firebaseDatabaseOptions.databaseType === 'realtime') {
         db = firebase.database();
-        if(window.firebaseDatabaseOptions.collections !== undefined) {
-          collections = window.firebaseDatabaseOptions.collections;
-        }
+      }
+
+      if(window.firebaseDatabaseOptions.databaseType === 'firestore') {
+        db = firebase.firestore();
+        const settings = {timestampsInSnapshots: true};
+        db.settings(settings);
+      }
+
+      if(window.firebaseDatabaseOptions.collections !== undefined) {
+        collections = window.firebaseDatabaseOptions.collections;
       }
 
       $('#get_database').on('click', function(e){
@@ -27,23 +35,45 @@
         $(this).hide();
       })
 
+      const appendData = (collectionName, result, listElemnt) => {
+        const text = document.createTextNode(collectionName + ': ' + JSON.stringify(result));
+        listElemnt.append(text);
+        $('.database-holder').append(listElemnt);
+      }
+
       const showDatabase = (collectionName) => {
-        const ref = db.ref(collectionName);
-        ref.on('value', function (snapshot) {
-            let result = snapshot.val();            
-            const listElemnt = document.createElement('pre');
-            if(result === null){
-              result = `No results found.`;
+
+        const listElemnt = document.createElement('pre');
+
+        if(window.firebaseDatabaseOptions.databaseType === 'realtime') {
+          const ref = db.ref(collectionName);
+          ref.on('value', function (snapshot) {
+              let result = snapshot.val();
+              if(result === null){
+                result = `No results found.`;
+              }
+              if($.isArray(result)){
+                result = result.filter(val => val !== '');
+              }
+              appendData(collectionName, result, listElemnt);
+          }, function (error) {
+              console.log('There was an error: ' + error);
+          });
+        } else if(window.firebaseDatabaseOptions.databaseType === 'firestore') {
+          db.collection(collectionName).get().then((querySnapshot) => {
+            let result = {};
+            querySnapshot.forEach((doc) => {
+                result[doc.id] = doc.data();
+            });            
+            if(Object.keys(result).length === 0) {
+              result['error'] = 'No results found.';
             }
-            if($.isArray(result)){
-              result = result.filter(val => val !== '');
-            }
-            const text = document.createTextNode(collectionName + ': ' + JSON.stringify(result));
-            listElemnt.append(text);
-            $('.database-holder').append(listElemnt);
-        }, function (error) {
-            console.log('There was an error: ' + error);
-        });
+            appendData(collectionName, result, listElemnt);
+          });
+        } else {
+          $('.database-holder').append('Sorry, this action cannot be done!');
+        }
+
       }
     })
   } else {

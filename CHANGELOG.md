@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [ 0.4.0 ] - 17-07-2018
+
+* Added Firestore database support in Dashboard
+
 ## [ 0.3.2 ] - 17-07-2018
 
 * Fixed firebase-show shortcode
