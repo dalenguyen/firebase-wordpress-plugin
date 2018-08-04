@@ -14,6 +14,8 @@
       add_shortcode('firebase_logout', array( 'Firebase_Shortcode', 'firebase_logout_func' ));
       add_shortcode('firebase_greetings', array( 'Firebase_Shortcode', 'firebase_greetings_func' ));
       add_shortcode('firebase_show', array( 'Firebase_Shortcode', 'firebase_show_func' ));
+      add_shortcode('firebase_show_not_login', array( 'Firebase_Shortcode', 'firebase_show_not_login_func' ));
+      add_shortcode('firebase_login_error', array( 'Firebase_Shortcode', 'firebase_login_error_func' ));
     }
 
     public static function firebase_login_func() {
@@ -61,5 +63,30 @@
       $html .= "</div>";
       return $html;
     }
+
+    public static function firebase_show_not_login_func($atts, $content) {
+      $class_name = "";
+      if(isset($atts['class'])){
+        $class_name = $atts['class'];
+      }
+      $html = "";
+      $html .= "<div class='firebase-show-when-not-login $class_name'>";
+      $html .= $content;
+      $html .= "</div>";
+      return $html;
+    }
+
+    public static function firebase_login_error_func($atts) {
+      $class_name = "";
+      if(isset($atts['class'])){
+        $class_name = $atts['class'];
+      }
+      $html = "";
+      $html .= "<div class='$class_name'>";
+        $html .= "<p id='firebase-login-error'></p>";
+      $html .= "</div>";
+      return $html;
+    }
+
   }
 ?>

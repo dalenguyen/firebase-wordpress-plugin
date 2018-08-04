@@ -10,7 +10,7 @@ Requires at least: 4.0.0
 
 Tested up to:      4.9.6
 
-Stable tag:        0.4.0
+Stable tag:        0.5.0
 
 Requires PHP:      5.2.4
 
@@ -24,7 +24,7 @@ Integrate Firebase is a plugin that helps to integrate Firebase features to Word
 
 The Integrate Firebase Plugin will help a Firebase user to login to your WordPress interface - not to WordPress dashboard - from Firebase authentication. You can show user info display data that is only available to your Firebase users.
 
-You also can view Real Time Database and Firestore from your Dashboard in Version 0.4.0
+You also can view Real Time Database and Firestore from your Dashboard in Version 0.5.0
 
 ### Links
 
@@ -66,6 +66,22 @@ You can add a shortcode to show user's info
 echo do_shortcode("[firebase_greetings]");
 ```
 
+### How can I show error when a user cannot login?
+
+You can show error message when a user cannot login by using a shortcode
+
+```
+echo do_shortcode("[firebase_login_error class='your-class-name'][/firebase_login_error]");
+```
+
+### How can I show data for a not logged in user?
+
+You can put your data as an HTML code inside a shortcode
+
+```
+echo do_shortcode("[firebase_show_not_login class='your-class-name']YOUR HTML CODE[/firebase_show_not_login]");
+```
+
 ### How can I hide or show data for a logged in user?
 
 You can put your data as an HTML code inside a shortcode
@@ -97,6 +113,11 @@ echo do_shortcode("[firebase_logout]");
 ![Firestore Settings](/assets/screenshot-3.png)
 
 ## Changelog
+
+### [ 0.5.0 ] - 04-08-2018
+
+* Add shortcode to display when not login
+* Add error handling shortcode
 
 ### [ 0.4.0 ]
 

@@ -9,13 +9,18 @@
     }
 
     $(document).ready(function(){
+      init();
       // Check user state
       checkUserState().then(loggedin => {
           if(loggedin){
               $('.firebase-show').show();
+              $('#firebase-signout').show();              
+              $('.firebase-show-when-not-login').hide();
               showGreetings();
           } else {
               $('.firebase-show').hide();
+              $('#firebase-signout').hide();
+              $('.firebase-show-when-not-login').show();
           }
       })
 
@@ -31,13 +36,17 @@
             firebase.auth().signInWithEmailAndPassword(email, password)
             .then(() => {
                 $('.firebase-show').show();
+                $('#firebase-signout').show();
+                $('p#firebase-login-error').hide();
+                $('.firebase-show-when-not-login').hide();
                 showGreetings();
             })
             .catch( error => {
                 console.log(error.message);
+                $('p#firebase-login-error').text(error.message);
             })
         } else {
-            alert('Your email or password is missing!');
+            $('p#firebase-login-error').text('Your email or password is missing!');
         }
       });
 
@@ -47,6 +56,9 @@
           firebase.auth().signOut()
           .then(() => {
               $('.firebase-show').hide();
+              $('#firebase-signout').hide();
+              $('p#firebase-login-error').hide();
+              $('.firebase-show-when-not-login').show();
           })
           .catch(error => console.log(error))
       })
@@ -80,6 +92,12 @@
                 $('#firebase-user').hide();
               }
           })
+      }
+
+      function init() {
+        $('.firebase-show').hide();
+        $('#firebase-signout').hide();
+        $('.firebase-show-when-not-login').hide();
       }
     })
   } else {

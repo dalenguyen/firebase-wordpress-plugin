@@ -4,7 +4,7 @@ Donate link:       https://www.paypal.me/DaleNguyen
 Tags:              firebase
 Requires at least: 4.0.0
 Tested up to:      4.9.6
-Stable tag:        0.4.0
+Stable tag:        0.5.0
 Requires PHP:      5.2.4
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,7 +32,7 @@ If installing the plugin from wordpress.org:
 
 = What can I do with this Integrate Firebase plugin? =
 
-At version 0.4.0, the user can integrate Firebase authentication to WordPress. That means you can:
+At version 0.5.0, the user can integrate Firebase authentication to WordPress. That means you can:
 
 * log in, log out and show data only to logged in users.
 *  Get Real Time database in Dashboard
@@ -50,6 +50,18 @@ If you want to create your own form. Please start with *<form id='login-form'>*.
 You can add a shortcode to show user's info
 
 > echo do_shortcode("[firebase_greetings]");
+
+= How can I show error when a user cannot login? =
+
+You can show error message when a user cannot login by using a shortcode
+
+> echo do_shortcode("[firebase_login_error class='your-class-name'][/firebase_login_error]");
+
+= How can I show data for a not logged in user? =
+
+You can put your data as an HTML code inside a shortcode
+
+> echo do_shortcode("[firebase_show_not_login class='your-class-name']YOUR HTML CODE[/firebase_show_not_login]");
 
 = How can I hide or show data for a logged in user? =
 
@@ -69,6 +81,10 @@ This is a shortcode for log out button.
 2. Please enter collection names in order to show the data from Real Time Database
 
 == Changelog ==
+
+= 0.5.0 =
+* Add shortcode to display when not login
+* Add error handling shortcode
 
 = 0.4.0 =
 * Added Firestore database support in Dashboard

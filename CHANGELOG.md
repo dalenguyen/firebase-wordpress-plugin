@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [ 0.5.0 ] - 04-08-2018
+
+* Add shortcode to display when not login
+* Add error handling shortcode
+
 ## [ 0.4.0 ] - 17-07-2018
 
 * Added Firestore database support in Dashboard
