@@ -10,7 +10,7 @@ Requires at least: 4.0.0
 
 Tested up to:      4.9.6
 
-Stable tag:        0.5.0
+Stable tag:        0.5.1
 
 Requires PHP:      5.2.4
 
@@ -24,7 +24,7 @@ Integrate Firebase is a plugin that helps to integrate Firebase features to Word
 
 The Integrate Firebase Plugin will help a Firebase user to login to your WordPress interface - not to WordPress dashboard - from Firebase authentication. You can show user info display data that is only available to your Firebase users.
 
-You also can view Real Time Database and Firestore from your Dashboard in Version 0.5.0
+You also can view Real Time Database and Firestore from your Dashboard in Version 0.5.1
 
 ### Links
 
@@ -47,6 +47,14 @@ At version 0.3.2, a user can integrate Firebase authentication to WordPress. Tha
 
 * log in, log out and show data only to logged in users.
 * Get Real Time database in Dashboard
+
+### How can I put a shortcode in a widget or WordPress editor? =
+
+The example in this guide only shows you how to put in a PHP file. If you want to put the shortcode inside a widget or editor. You can simply do this:
+
+```
+[firebase_login][/firebase_login]
+```
 
 ### How can I add a login form to WordPress?
 
@@ -113,6 +121,9 @@ echo do_shortcode("[firebase_logout]");
 ![Firestore Settings](/assets/screenshot-3.png)
 
 ## Changelog
+
+### [ 0.5.1 ] - 11-08-2018
+* Hide login form after logging in
 
 ### [ 0.5.0 ] - 04-08-2018
 

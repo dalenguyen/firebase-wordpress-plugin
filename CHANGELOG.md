@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [ 0.5.1 ] - 11-08-2018
+* Hide login form after logging in
+
 ## [ 0.5.0 ] - 04-08-2018
 
 * Add shortcode to display when not login

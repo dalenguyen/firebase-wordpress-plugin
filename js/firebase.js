@@ -13,14 +13,10 @@
       // Check user state
       checkUserState().then(loggedin => {
           if(loggedin){
-              $('.firebase-show').show();
-              $('#firebase-signout').show();              
-              $('.firebase-show-when-not-login').hide();
+              action_when_login();
               showGreetings();
           } else {
-              $('.firebase-show').hide();
-              $('#firebase-signout').hide();
-              $('.firebase-show-when-not-login').show();
+              action_when_logout();
           }
       })
 
@@ -35,14 +31,12 @@
         if(email !== '' && password !== ''){
             firebase.auth().signInWithEmailAndPassword(email, password)
             .then(() => {
-                $('.firebase-show').show();
-                $('#firebase-signout').show();
-                $('p#firebase-login-error').hide();
-                $('.firebase-show-when-not-login').hide();
+                action_when_login();
                 showGreetings();
             })
             .catch( error => {
                 console.log(error.message);
+                $('p#firebase-login-error').show();
                 $('p#firebase-login-error').text(error.message);
             })
         } else {
@@ -55,10 +49,7 @@
           e.preventDefault();
           firebase.auth().signOut()
           .then(() => {
-              $('.firebase-show').hide();
-              $('#firebase-signout').hide();
-              $('p#firebase-login-error').hide();
-              $('.firebase-show-when-not-login').show();
+              action_when_logout();
           })
           .catch(error => console.log(error))
       })
@@ -95,9 +86,23 @@
       }
 
       function init() {
+        action_when_logout();
+      }
+
+      function action_when_login() {
+        $('.firebase-show').show();
+        $('#firebase-signout').show();
+        $('p#firebase-login-error').hide();
+        $('.firebase-show-when-not-login').hide();
+        $('#firebase-login-form').hide();
+      }
+
+      function action_when_logout() {
         $('.firebase-show').hide();
         $('#firebase-signout').hide();
-        $('.firebase-show-when-not-login').hide();
+        $('p#firebase-login-error').hide();
+        $('.firebase-show-when-not-login').show();
+        $('#firebase-login-form').show();
       }
     })
   } else {
