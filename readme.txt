@@ -3,8 +3,8 @@ Contributors:      hanthuy
 Donate link:       https://www.paypal.me/DaleNguyen
 Tags:              firebase
 Requires at least: 4.0.0
-Tested up to:      4.9.6
-Stable tag:        0.5.1
+Tested up to:      5.1.1
+Stable tag:        0.5.2
 Requires PHP:      5.2.4
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,6 +14,8 @@ Integrate Firebase is a plugin that helps to integrate Firebase features to Word
 == Description ==
 
 The Firebase for WordPress Plugin will help a Firebase user to login to your WordPress interface - not to WordPress dashboard - from Firebase authentication. You can show user info and display data that is only available to your Firebase users.
+
+I'm planning to release a PRO version of this plugin, and it will take a lot of time to add new features. If there are enough people who want to use a better version of this. I will spend time to develop it. Meanwhile, if you are interested in the Integrate Firebase PRO version, please take part in this survey: https://forms.gle/5TBSDHUtSeVzzKno8
 
 = Links =
 
@@ -32,10 +34,11 @@ If installing the plugin from wordpress.org:
 
 = What can I do with this Integrate Firebase plugin? =
 
-At version 0.5.1, the user can integrate Firebase authentication to WordPress. That means you can:
+At version 0.5.2, the user can integrate Firebase authentication to WordPress. That means you can:
 
-* log in, log out and show data only to logged in users.
-*  Get Real Time database in Dashboard
+* Log in, log out and show custom data only to logged in users.
+* Get Real Time and Firestore database in Dashboard
+* Show realtime database on frontend after users log in
 
 = How can I put a shortcode in a widget or WordPress editor? =
 
@@ -75,6 +78,12 @@ You can put your data as an HTML code inside a shortcode
 
 > echo do_shortcode("[firebase_show class='your-class-name']YOUR HTML CODE[/firebase_show]");
 
+= How can I show realtime database for a logged in user? =
+
+You can put your data as an HTML code inside a shortcode. Realtime data will be shown as a table with an id #if-realtime.
+
+> echo do_shortcode("[realtime class='your-class-name' collection_name='string' document_name='string']");
+
 = How can I log out?
 
 This is a shortcode for log out button.
@@ -87,6 +96,9 @@ This is a shortcode for log out button.
 2. Please enter collection names in order to show the data from Real Time Database
 
 == Changelog ==
+
+= 0.5.2 ] =
+* Show realtime database after login
 
 = 0.5.1 =
 * Hide login form after logging in

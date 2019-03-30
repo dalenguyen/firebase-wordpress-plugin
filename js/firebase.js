@@ -9,7 +9,9 @@
     }
 
     $(document).ready(function(){
+      
       init();
+
       // Check user state
       checkUserState().then(loggedin => {
           if(loggedin){
@@ -85,6 +87,35 @@
           })
       }
 
+      // Realtime database
+      function showRealtimeDatabase() {
+        var db = firebase.database();
+        var realtimeEl = $('#if-realtime');
+        var collectionName = realtimeEl.data('collection-name');
+        var documentName = realtimeEl.data('document-name');
+
+        if(collectionName && documentName) {
+          db.ref('/' + collectionName + '/' + documentName).once('value').then(function(snapshot) {
+            var dataObj = snapshot.val();
+            if (dataObj) {
+              var html = '<table>';
+              $.each(dataObj, function(key, value) {
+                html += '<tr>';
+                  html += '<td>' + key + '</td>';
+                  html += '<td>' + value + '</td>';
+                html += '</tr>';
+              })
+              html += '</table>';
+              realtimeEl.append(html);
+            } else {
+                console.error('Please check your collection and document name in the [realtime] shortcode!');
+            }
+
+          });
+        } else {
+          console.warn('Please check your collection and document name in the [realtime] shortcode!');
+        }
+      }
       function init() {
         action_when_logout();
       }
@@ -95,6 +126,8 @@
         $('p#firebase-login-error').hide();
         $('.firebase-show-when-not-login').hide();
         $('#firebase-login-form').hide();
+        // Realtime database
+        showRealtimeDatabase();
       }
 
       function action_when_logout() {
@@ -103,6 +136,8 @@
         $('p#firebase-login-error').hide();
         $('.firebase-show-when-not-login').show();
         $('#firebase-login-form').show();
+        // Realtime database
+        $('#if-realtime table').remove();
       }
     })
   } else {

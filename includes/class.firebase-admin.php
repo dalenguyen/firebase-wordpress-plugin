@@ -299,6 +299,7 @@ class Firebase_Admin{
     echo "<div class='wrap'>";
         echo "<h1>Firebase Settings</h1>";
         echo "<h3>Integrate Firebase to WordPress (<a href='https://github.com/dalenguyen/firebase-wordpress-plugin' target='_blank'>Github</a> - v".FIREBASE_WP_VERSION.")</h3>";
+        echo "<p>Are you interested in <a href='https://forms.gle/5TBSDHUtSeVzzKno8' target='_blank'>PRO version?</p>";
         settings_errors();
 
         $active_tab = isset ( $_GET['tab'] ) ? $_GET['tab'] : 'general';

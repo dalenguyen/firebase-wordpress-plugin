@@ -10,7 +10,7 @@ Requires at least: 4.0.0
 
 Tested up to:      4.9.6
 
-Stable tag:        0.5.1
+Stable tag:        0.5.2
 
 Requires PHP:      5.2.4
 
@@ -20,11 +20,15 @@ License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
 Integrate Firebase is a plugin that helps to integrate Firebase features to WordPress
 
+## Announcement
+
+I'm planning to release a PRO version of this plugin, and it will take a lot of time to add new features. If there are enough people who want to use a better version of this. I will spend time to develop it. Meanwhile, if you are interested in the Integrate Firebase PRO version, please take part in this survey: https://forms.gle/5TBSDHUtSeVzzKno8
+
 ## Description
 
 The Integrate Firebase Plugin will help a Firebase user to login to your WordPress interface - not to WordPress dashboard - from Firebase authentication. You can show user info display data that is only available to your Firebase users.
 
-You also can view Real Time Database and Firestore from your Dashboard in Version 0.5.1
+You also can view Real Time Database and Firestore from your Dashboard in Version 0.5.2
 
 ### Links
 
@@ -98,6 +102,14 @@ You can put your data as an HTML code inside a shortcode
 echo do_shortcode("[firebase_show class='your-class-name']YOUR HTML CODE[/firebase_show]");
 ```
 
+### How can I show realtime database for a logged in user?
+
+You can put your data as an HTML code inside a shortcode. Realtime data will be shown as a table with an id #if-realtime.
+
+```
+echo do_shortcode("[realtime class='your-class-name' collection_name='string' document_name='string']");
+```
+
 ### How can I log out?
 
 This is a shortcode for log out button.
@@ -121,6 +133,9 @@ echo do_shortcode("[firebase_logout]");
 ![Firestore Settings](/assets/screenshot-3.png)
 
 ## Changelog
+
+### [ 0.5.2 ] - 30-03-2019
+* Show realtime database after login
 
 ### [ 0.5.1 ] - 11-08-2018
 * Hide login form after logging in

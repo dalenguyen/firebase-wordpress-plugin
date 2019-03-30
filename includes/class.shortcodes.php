@@ -10,12 +10,18 @@
 
     public static function init_hooks() {
       self::$initiated = true;
+      // Login & Logout
       add_shortcode('firebase_login', array( 'Firebase_Shortcode', 'firebase_login_func' ));
       add_shortcode('firebase_logout', array( 'Firebase_Shortcode', 'firebase_logout_func' ));
       add_shortcode('firebase_greetings', array( 'Firebase_Shortcode', 'firebase_greetings_func' ));
+      add_shortcode('firebase_login_error', array( 'Firebase_Shortcode', 'firebase_login_error_func' ));
+
+      //  General data
       add_shortcode('firebase_show', array( 'Firebase_Shortcode', 'firebase_show_func' ));
       add_shortcode('firebase_show_not_login', array( 'Firebase_Shortcode', 'firebase_show_not_login_func' ));
-      add_shortcode('firebase_login_error', array( 'Firebase_Shortcode', 'firebase_login_error_func' ));
+
+      // Realtime database
+      add_shortcode('realtime', array( 'Firebase_Shortcode', 'realtime_func' ));
     }
 
     public static function firebase_login_func() {
@@ -87,6 +93,32 @@
       $html .= "</div>";
       return $html;
     }
+
+    /**
+     * Realtime database
+     */
+     public static function realtime_func($atts) {
+       $class_name = "";
+       $collection_name = "";
+       $document_name = "";
+
+       if(isset($atts['class'])){
+         $class_name = $atts['class'];
+       }
+
+       if(isset($atts['collection_name'])){
+         $collection_name = $atts['collection_name'];
+       }
+
+       if(isset($atts['document_name'])){
+         $document_name = $atts['document_name'];
+       }
+
+       $html = "";
+       $html .= "<div id='if-realtime' class='if-realtime $class_name' data-collection-name='$collection_name' data-document-name='$document_name'>";       
+       $html .= "</div>";
+       return $html;
+     }
 
   }
 ?>

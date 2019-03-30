@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [ 0.5.2 ] - 30-03-2019
+* Show realtime database after login
+
 ## [ 0.5.1 ] - 11-08-2018
 * Hide login form after logging in
 
