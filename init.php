@@ -15,7 +15,7 @@
  * Author URI:   http://dalenguyen.me
  * Contributors: Dale Nguyen (@dalenguyen)
  *
- * Version:      0.5.2
+ * Version:      0.5.3
  *
  * Text Domain:  integrate-firebase
  *
@@ -48,23 +48,23 @@
  */
 
 // Make sure we don't expose any info if called directly
-if ( !function_exists( 'add_action' ) ) {
- 	echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
- 	exit;
+if (!function_exists('add_action')) {
+    echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
+    exit;
 }
 
-define( 'FIREBASE_WP_VERSION', '0.5.2' );
-define( 'FIREBASE_WP__MINIMUM_WP_VERSION', '4.0.0' );
-define( 'FIREBASE_WP__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define('FIREBASE_WP_VERSION', '0.5.3');
+define('FIREBASE_WP__MINIMUM_WP_VERSION', '4.0.0');
+define('FIREBASE_WP__PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase.php';
-add_action( 'init', array( 'Firebase', 'init' ));
+add_action('init', array('Firebase', 'init'));
 
 require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.shortcodes.php';
-add_action( 'init', array( 'Firebase_Shortcode', 'init' ));
+add_action('init', array('Firebase_Shortcode', 'init'));
 
 // Load plugins files
-if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
-  require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase-admin.php';
-  add_action( 'init', array( 'Firebase_Admin', 'init' ) );
+if (is_admin() || (defined('WP_CLI') && WP_CLI)) {
+    require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase-admin.php';
+    add_action('init', array('Firebase_Admin', 'init'));
 }

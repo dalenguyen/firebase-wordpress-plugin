@@ -3,8 +3,8 @@ Contributors:      hanthuy
 Donate link:       https://www.paypal.me/DaleNguyen
 Tags:              firebase
 Requires at least: 4.0.0
-Tested up to:      5.1.1
-Stable tag:        0.5.2
+Tested up to:      5.3.2
+Stable tag:        0.5.3
 Requires PHP:      5.2.4
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -34,7 +34,7 @@ If installing the plugin from wordpress.org:
 
 = What can I do with this Integrate Firebase plugin? =
 
-At version 0.5.2, the user can integrate Firebase authentication to WordPress. That means you can:
+At version 0.5.3, the user can integrate Firebase authentication to WordPress. That means you can:
 
 * Log in, log out and show custom data only to logged in users.
 * Get Real Time and Firestore database in Dashboard
@@ -96,6 +96,9 @@ This is a shortcode for log out button.
 2. Please enter collection names in order to show the data from Real Time Database
 
 == Changelog ==
+
+= 0.5.3 ] =
+* Update firebase scripts
 
 = 0.5.2 ] =
 * Show realtime database after login

@@ -1,22 +1,22 @@
 # Integrate Firebase WordPress Plugin
 
-Contributors:      dalenguyen
+Contributors: dalenguyen
 
-Buy me a coffee:       https://www.paypal.me/DaleNguyen
+Buy me a coffee: https://www.paypal.me/DaleNguyen
 
-Tags:              firebase, wordpress
+Tags: firebase, wordpress
 
 Requires at least: 4.0.0
 
-Tested up to:      4.9.6
+Tested up to: 4.9.6
 
-Stable tag:        0.5.2
+Stable tag: 0.5.3
 
-Requires PHP:      5.2.4
+Requires PHP: 5.2.4
 
-License:           GPLv2 or later
+License: GPLv2 or later
 
-License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Integrate Firebase is a plugin that helps to integrate Firebase features to WordPress
 
@@ -28,12 +28,12 @@ I'm planning to release a PRO version of this plugin, and it will take a lot of 
 
 The Integrate Firebase Plugin will help a Firebase user to login to your WordPress interface - not to WordPress dashboard - from Firebase authentication. You can show user info display data that is only available to your Firebase users.
 
-You also can view Real Time Database and Firestore from your Dashboard in Version 0.5.2
+You also can view Real Time Database and Firestore from your Dashboard in Version 0.5.3
 
 ### Links
 
-* [Github project page](https://github.com/dalenguyen/firebase-wordpress-plugin)
-* [View CHANGELOG](https://github.com/dalenguyen/firebase-wordpress-plugin/blob/master/CHANGELOG.md)
+- [Github project page](https://github.com/dalenguyen/firebase-wordpress-plugin)
+- [View CHANGELOG](https://github.com/dalenguyen/firebase-wordpress-plugin/blob/master/CHANGELOG.md)
 
 ## Installation
 
@@ -49,8 +49,8 @@ If installing the plugin from wordpress.org:
 
 At version 0.3.2, a user can integrate Firebase authentication to WordPress. That means you can:
 
-* log in, log out and show data only to logged in users.
-* Get Real Time database in Dashboard
+- log in, log out and show data only to logged in users.
+- Get Real Time database in Dashboard
 
 ### How can I put a shortcode in a widget or WordPress editor? =
 
@@ -68,7 +68,7 @@ After adding Firebase credentials from Settings > Firebase. You can add login fo
 echo do_shortcode("[firebase_login]");
 ```
 
-If you want to create your own form. Please start with *<form id='login-form'>*. For submit button, you have to add 'firebase-form-submit' as an ID.
+If you want to create your own form. Please start with _<form id='login-form'>_. For submit button, you have to add 'firebase-form-submit' as an ID.
 
 ### How can I show user info after login?
 
@@ -134,46 +134,58 @@ echo do_shortcode("[firebase_logout]");
 
 ## Changelog
 
+### [ 0.5.3 ] - 16-02-2020
+
+- Update firebase scripts
+
 ### [ 0.5.2 ] - 30-03-2019
-* Show realtime database after login
+
+- Show realtime database after login
 
 ### [ 0.5.1 ] - 11-08-2018
-* Hide login form after logging in
+
+- Hide login form after logging in
 
 ### [ 0.5.0 ] - 04-08-2018
 
-* Add shortcode to display when not login
-* Add error handling shortcode
+- Add shortcode to display when not login
+- Add error handling shortcode
 
 ### [ 0.4.0 ]
 
-* Added Firestore database support in Dashboard
+- Added Firestore database support in Dashboard
 
 ### 0.3.2
-* Fixed firebase show shortcode
+
+- Fixed firebase show shortcode
 
 ### 0.3.1
 
-* Fixing get firebase credentials
+- Fixing get firebase credentials
 
 ### 0.3.0
-* Added about information
-* Added Real Time database support in Dashboard
+
+- Added about information
+- Added Real Time database support in Dashboard
 
 ### 0.2.2
-* Fixed readme typos
+
+- Fixed readme typos
 
 ### 0.2.1
-* Change plugin name
-* Update logout shortcode
+
+- Change plugin name
+- Update logout shortcode
 
 ### 0.2.0
-* Add scripts & styles
-* Allow to show and hide data after login
+
+- Add scripts & styles
+- Allow to show and hide data after login
 
 ### 0.1.0
-* Started the project and add an authentication method
+
+- Started the project and add an authentication method
 
 ## Upgrade Notice
 
-Please use [github issues](https://github.com/dalenguyen/firebase-wordpress-plugin/issues) when submitting your logs.  Please do not post to the forums.
+Please use [github issues](https://github.com/dalenguyen/firebase-wordpress-plugin/issues) when submitting your logs. Please do not post to the forums.
