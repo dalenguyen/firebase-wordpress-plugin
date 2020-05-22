@@ -144,8 +144,6 @@
         $('p#firebase-login-error').hide();
         $('.firebase-show-when-not-login').show();
         $('#firebase-login-form').show();
-        // Realtime database
-        $('#if-realtime table').remove();
       }
     });
   } else {

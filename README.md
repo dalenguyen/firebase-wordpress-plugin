@@ -10,7 +10,7 @@ Requires at least: 4.0.0
 
 Tested up to: 4.9.6
 
-Stable tag: 0.6.0
+Stable tag: 0.6.1
 
 Requires PHP: 5.2.4
 
@@ -134,7 +134,11 @@ echo do_shortcode("[firebase_logout]");
 
 ## Changelog
 
-### [ 0.6. ] - 21-05-2020
+### [ 0.6.1 ] - 21-05-2020
+
+- Removed hide realtime table script
+
+### [ 0.6.0 ] - 21-05-2020
 
 - Show realtime data publicly
 
