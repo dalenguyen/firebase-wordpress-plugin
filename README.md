@@ -10,7 +10,7 @@ Requires at least: 4.0.0
 
 Tested up to: 4.9.6
 
-Stable tag: 0.5.3
+Stable tag: 0.6.0
 
 Requires PHP: 5.2.4
 
@@ -22,7 +22,7 @@ Integrate Firebase is a plugin that helps to integrate Firebase features to Word
 
 ## Announcement
 
-I'm planning to release a PRO version of this plugin, and it will take a lot of time to add new features. If there are enough people who want to use a better version of this. I will spend time to develop it. Meanwhile, if you are interested in the Integrate Firebase PRO version, please take part in this survey: https://forms.gle/5TBSDHUtSeVzzKno8
+If you want a secured implementation, with much more features, check the [Interate Firebase PRO](https://firebase.dalenguyen.me/) version.
 
 ## Description
 
@@ -133,6 +133,10 @@ echo do_shortcode("[firebase_logout]");
 ![Firestore Settings](/assets/screenshot-3.png)
 
 ## Changelog
+
+### [ 0.6. ] - 21-05-2020
+
+- Show realtime data publicly
 
 ### [ 0.5.3 ] - 16-02-2020
 
