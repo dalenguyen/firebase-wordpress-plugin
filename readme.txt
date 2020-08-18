@@ -3,8 +3,8 @@ Contributors:      hanthuy
 Donate link:       https://www.paypal.me/DaleNguyen
 Tags:              firebase
 Requires at least: 4.0.0
-Tested up to:      5.3.2
-Stable tag:        0.6.1
+Tested up to:      5.5
+Stable tag:        0.7.0
 Requires PHP:      5.2.4
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -96,6 +96,9 @@ This is a shortcode for log out button.
 2. Please enter collection names in order to show the data from Real Time Database
 
 == Changelog ==
+
+= 0.7.0 =
+* Fixed add_options_page error
 
 = 0.6.1 =
 * Removed hide realtime table script
