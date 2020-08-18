@@ -36,10 +36,9 @@ class Firebase_Admin {
         $capability = 'manage_options';
         $menu_slug = 'firebase-setting';
         $function = 'display_page';
-        $icon_url = '';
-        $position = '';
+        $position = null;
 
-        add_options_page(__($page_title, "firebase"), __($menu_title, "firebase"), $capability, $menu_slug, array("Firebase_Admin", $function), $icon_url, $position);
+        add_options_page(__($page_title, "firebase"), __($menu_title, "firebase"), $capability, $menu_slug, array("Firebase_Admin", $function), $position);
     }
 
     public static function load_firebase_admin_js() {
