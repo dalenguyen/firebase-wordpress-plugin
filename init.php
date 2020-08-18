@@ -3,21 +3,21 @@
  * The initation loader for Firebase, and the main plugin file.
  *
  * @category     WordPress_Plugin
- * @package      firebase-wordpress
+ * @package      integrate-firebase
  * @author       dalenguyen
  * @license      GPL-2.0+
  * @link         https://github.com/dalenguyen/firebase-wordpress-plugin
  *
- * Plugin Name:  Firebase for WordPress
+ * Plugin Name:  Integrate Firebase
  * Plugin URI:   https://github.com/dalenguyen/firebase-wordpress-plugin
- * Description:  Firebase WordPress is a plugin that helps to integrate Firebase features to WordPress
+ * Description:  Integrate Firebase is a plugin that helps to integrate Firebase features to WordPress
  * Author:       dalenguyen
  * Author URI:   http://dalenguyen.me
  * Contributors: Dale Nguyen (@dalenguyen)
  *
- * Version:      0.2.0
+ * Version:      0.6.1
  *
- * Text Domain:  firebase
+ * Text Domain:  integrate-firebase
  *
  *
  * Released under the GPL license
@@ -48,23 +48,23 @@
  */
 
 // Make sure we don't expose any info if called directly
-if ( !function_exists( 'add_action' ) ) {
- 	echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
- 	exit;
+if (!function_exists('add_action')) {
+    echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
+    exit;
 }
 
-define( 'FIREBASE_WP_VERSION', '0.2.0' );
-define( 'FIREBASE_WP__MINIMUM_WP_VERSION', '4.0.0' );
-define( 'FIREBASE_WP__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define('FIREBASE_WP_VERSION', '0.6.1');
+define('FIREBASE_WP__MINIMUM_WP_VERSION', '4.0.0');
+define('FIREBASE_WP__PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase.php';
-add_action( 'init', array( 'Firebase', 'init' ));
+add_action('init', array('Firebase', 'init'));
 
 require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.shortcodes.php';
-add_action( 'init', array( 'Firebase_Shortcode', 'init' ));
+add_action('init', array('Firebase_Shortcode', 'init'));
 
 // Load plugins files
-if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
-  require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase-admin.php';
-  add_action( 'init', array( 'Firebase_Admin', 'init' ) );
+if (is_admin() || (defined('WP_CLI') && WP_CLI)) {
+    require_once FIREBASE_WP__PLUGIN_DIR . 'includes/class.firebase-admin.php';
+    add_action('init', array('Firebase_Admin', 'init'));
 }
