@@ -36,10 +36,9 @@ class Firebase_Admin {
         $capability = 'manage_options';
         $menu_slug = 'firebase-setting';
         $function = 'display_page';
-        $icon_url = '';
-        $position = '';
+        $position = null;
 
-        add_options_page(__($page_title, "firebase"), __($menu_title, "firebase"), $capability, $menu_slug, array("Firebase_Admin", $function), $icon_url, $position);
+        add_options_page(__($page_title, "firebase"), __($menu_title, "firebase"), $capability, $menu_slug, array("Firebase_Admin", $function), $position);
     }
 
     public static function load_firebase_admin_js() {
@@ -47,10 +46,10 @@ class Firebase_Admin {
 
         wp_enqueue_style('firebase-admin', plugin_dir_url(dirname(__FILE__)) . 'css/firebase-admin.css');
 
-        wp_enqueue_script('firebase_app', 'https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js', array(), FIREBASE_WP_VERSION, false);
-        wp_enqueue_script('firebase_auth', 'https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js', array(), FIREBASE_WP_VERSION, false);
-        wp_enqueue_script('firebase_database', 'https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js', array(), FIREBASE_WP_VERSION, false);
-        wp_enqueue_script('firebase_firestore', 'https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js', array(), FIREBASE_WP_VERSION, false);
+        wp_enqueue_script('firebase_app', 'https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js', array(), FIREBASE_WP_VERSION, false);
+        wp_enqueue_script('firebase_auth', 'https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js', array(), FIREBASE_WP_VERSION, false);
+        wp_enqueue_script('firebase_database', 'https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js', array(), FIREBASE_WP_VERSION, false);
+        wp_enqueue_script('firebase_firestore', 'https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js', array(), FIREBASE_WP_VERSION, false);
 
         wp_enqueue_script('firebase-admin', plugin_dir_url(dirname(__FILE__)) . 'js/firebase-admin.js', array('jquery'), FIREBASE_WP_VERSION, false);
         wp_localize_script('firebase-admin', 'firebaseDatabaseOptions', array(

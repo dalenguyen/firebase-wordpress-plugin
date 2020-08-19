@@ -20,10 +20,10 @@ class Firebase {
 
         wp_enqueue_style('firebase', plugin_dir_url(dirname(__FILE__)) . 'css/firebase.css');
 
-        wp_enqueue_script('firebase_app', 'https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js', array(), FIREBASE_WP_VERSION, false);
-        wp_enqueue_script('firebase_auth', 'https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js', array(), FIREBASE_WP_VERSION, false);
-        wp_enqueue_script('firebase_database', 'https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js', array(), FIREBASE_WP_VERSION, false);
-        wp_enqueue_script('firebase_firestore', 'https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js', array(), FIREBASE_WP_VERSION, false);
+        wp_enqueue_script('firebase_app', 'https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js', array(), FIREBASE_WP_VERSION, false);
+        wp_enqueue_script('firebase_auth', 'https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js', array(), FIREBASE_WP_VERSION, false);
+        wp_enqueue_script('firebase_database', 'https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js', array(), FIREBASE_WP_VERSION, false);
+        wp_enqueue_script('firebase_firestore', 'https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js', array(), FIREBASE_WP_VERSION, false);
 
         wp_enqueue_script('firebase', plugin_dir_url(dirname(__FILE__)) . 'js/firebase.js', array('jquery'), FIREBASE_WP_VERSION, false);
 
