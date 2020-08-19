@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 - Fixed add_options_page error
 - Preformated data before showing in dashboard
 - Delegated button style to WordPress
+- Updated firebase package to 7.18.0
 
 ## [ 0.6.1 ] - 22-05-2019
 

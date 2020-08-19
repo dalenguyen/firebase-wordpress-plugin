@@ -101,6 +101,7 @@ This is a shortcode for log out button.
 * Fixed add_options_page error
 * Preformated data before showing in dashboard
 * Delegated button style to WordPress
+* Updated firebase package to 7.18.0
 
 = 0.6.1 =
 * Removed hide realtime table script
