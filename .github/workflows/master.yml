@@ -4,6 +4,10 @@ on:
   push:
     tags:
       - '*'
+    branches:
+      - master
+  release:
+    types: [published]
 
 jobs:
   deploy-plugin:
