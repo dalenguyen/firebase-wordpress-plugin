@@ -100,6 +100,7 @@ This is a shortcode for log out button.
 = 0.7.0 =
 * Fixed add_options_page error
 * Preformated data before showing in dashboard
+* Delegated button style to WordPress
 
 = 0.6.1 =
 * Removed hide realtime table script

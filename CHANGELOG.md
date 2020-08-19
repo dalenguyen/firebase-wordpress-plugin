@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - Fixed add_options_page error
 - Preformated data before showing in dashboard
+- Delegated button style to WordPress
 
 ## [ 0.6.1 ] - 22-05-2019
 

@@ -132,7 +132,7 @@ echo do_shortcode("[firebase_logout]");
 
 ![Firestore Settings](/assets/screenshot-3.png)
 
-## [Changelog](https://github.com/dalenguyen/firebase-wordpress-plugin/blob/master/CHANGELOG.md)
+## [Changelog](/CHANGELOG.md)
 
 ## Upgrade Notice
 
