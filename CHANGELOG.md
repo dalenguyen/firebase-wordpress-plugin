@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [ 0.7.0 ] - 18-08-2020
 
 - Fixed add_options_page error
+- Preformated data before showing in dashboard
 
 ## [ 0.6.1 ] - 22-05-2019
 

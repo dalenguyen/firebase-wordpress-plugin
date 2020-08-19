@@ -1,4 +1,4 @@
-;(function($) {
+;(function ($) {
   'use strict'
 
   if (
@@ -10,7 +10,7 @@
       firebase.initializeApp(window.firebaseOptions)
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       let db
       let collections
 
@@ -29,7 +29,7 @@
         collections = window.firebaseDatabaseOptions.collections
       }
 
-      $('#get_database').on('click', function(e) {
+      $('#get_database').on('click', function (e) {
         e.preventDefault()
         let collectionArray = collections.trim().split(',')
         collectionArray.map(name => {
@@ -40,7 +40,7 @@
 
       const appendData = (collectionName, result, listElemnt) => {
         const text = document.createTextNode(
-          collectionName + ': ' + JSON.stringify(result)
+          collectionName + ': ' + JSON.stringify(result, undefined, 2)
         )
         listElemnt.append(text)
         $('.database-holder').append(listElemnt)
@@ -53,7 +53,7 @@
           const ref = db.ref(collectionName)
           ref.on(
             'value',
-            function(snapshot) {
+            function (snapshot) {
               let result = snapshot.val()
               if (result === null) {
                 result = `No results found.`
@@ -63,7 +63,7 @@
               }
               appendData(collectionName, result, listElemnt)
             },
-            function(error) {
+            function (error) {
               console.log('There was an error: ' + error)
             }
           )

@@ -132,67 +132,7 @@ echo do_shortcode("[firebase_logout]");
 
 ![Firestore Settings](/assets/screenshot-3.png)
 
-## Changelog
-
-### [ 0.6.1 ] - 21-05-2020
-
-- Removed hide realtime table script
-
-### [ 0.6.0 ] - 21-05-2020
-
-- Show realtime data publicly
-
-### [ 0.5.3 ] - 16-02-2020
-
-- Update firebase scripts
-
-### [ 0.5.2 ] - 30-03-2019
-
-- Show realtime database after login
-
-### [ 0.5.1 ] - 11-08-2018
-
-- Hide login form after logging in
-
-### [ 0.5.0 ] - 04-08-2018
-
-- Add shortcode to display when not login
-- Add error handling shortcode
-
-### [ 0.4.0 ]
-
-- Added Firestore database support in Dashboard
-
-### 0.3.2
-
-- Fixed firebase show shortcode
-
-### 0.3.1
-
-- Fixing get firebase credentials
-
-### 0.3.0
-
-- Added about information
-- Added Real Time database support in Dashboard
-
-### 0.2.2
-
-- Fixed readme typos
-
-### 0.2.1
-
-- Change plugin name
-- Update logout shortcode
-
-### 0.2.0
-
-- Add scripts & styles
-- Allow to show and hide data after login
-
-### 0.1.0
-
-- Started the project and add an authentication method
+## [Changelog](https://github.com/dalenguyen/firebase-wordpress-plugin/blob/master/CHANGELOG.md)
 
 ## Upgrade Notice
 
