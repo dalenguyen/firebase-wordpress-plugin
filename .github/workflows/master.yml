@@ -1,0 +1,25 @@
+name: Push to Master Branch
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - master
+  release:
+    types: [published]
+
+jobs:
+  deploy-plugin:
+    name: Plugin Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: WordPress Plugin Deploy
+        uses: 10up/action-wordpress-plugin-deploy@master
+        env:
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SLUG: integrate-firebase
+          VERSION: 0.7.0
