@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [ 0.8.0 ] - 30-01-2021
+
+- Updated firebase packages to 8.2.5
+- Moved scripts to the end of body tag
+
 ## [ 0.7.0 ] - 18-08-2020
 
 - Fixed add_options_page error
