@@ -3,8 +3,8 @@ Contributors:      hanthuy
 Donate link:       https://www.paypal.me/DaleNguyen
 Tags:              firebase
 Requires at least: 4.0.0
-Tested up to:      5.5
-Stable tag:        0.7.0
+Tested up to:      5.6
+Stable tag:        0.8.0
 Requires PHP:      5.2.4
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -64,25 +64,25 @@ You can add a shortcode to show user's info
 
 You can show error message when a user cannot login by using a shortcode
 
-> echo do_shortcode("[firebase_login_error class='your-class-name'][/firebase_login_error]");
+> echo do_shortcode("[firebase_login_error class="your-class-name"][/firebase_login_error]");
 
 = How can I show data for a not logged in user? =
 
 You can put your data as an HTML code inside a shortcode
 
-> echo do_shortcode("[firebase_show_not_login class='your-class-name']YOUR HTML CODE[/firebase_show_not_login]");
+> echo do_shortcode("[firebase_show_not_login class="your-class-name"]YOUR HTML CODE[/firebase_show_not_login]");
 
 = How can I hide or show data for a logged in user? =
 
 You can put your data as an HTML code inside a shortcode
 
-> echo do_shortcode("[firebase_show class='your-class-name']YOUR HTML CODE[/firebase_show]");
+> echo do_shortcode("[firebase_show class="your-class-name"]YOUR HTML CODE[/firebase_show]");
 
 = How can I show realtime database for a logged in user? =
 
 You can put your data as an HTML code inside a shortcode. Realtime data will be shown as a table with an id #if-realtime.
 
-> echo do_shortcode("[realtime class='your-class-name' collection_name='string' document_name='string']");
+> echo do_shortcode("[realtime class="your-class-name" collection_name="string" document_name="string"]");
 
 = How can I log out?
 
@@ -96,6 +96,10 @@ This is a shortcode for log out button.
 2. Please enter collection names in order to show the data from Real Time Database
 
 == Changelog ==
+
+= 0.8.0 =
+* Updated firebase packages to 8.2.5
+* Moved scripts to the end of body tag
 
 = 0.7.0 =
 * Fixed add_options_page error
