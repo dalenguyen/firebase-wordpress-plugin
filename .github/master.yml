@@ -1,7 +1,7 @@
-name: Push to Master Branch
+name: Deploy to WordPress.org
 
 on:
-  create:
+  push:
     tags:
       - '*'
 
