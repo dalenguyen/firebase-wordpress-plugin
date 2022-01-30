@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [ 0.9.0 ] - 30-01-2022
+
+- Bump support version to WordPress v5.9
+
 ## [ 0.8.0 ] - 30-01-2021
 
 - Updated firebase packages to 8.2.5
