@@ -3,8 +3,8 @@ Contributors:      hanthuy
 Donate link:       https://www.paypal.me/DaleNguyen
 Tags:              firebase
 Requires at least: 4.0.0
-Tested up to:      5.6
-Stable tag:        0.9.0
+Tested up to:      5.9
+Stable tag:        0.9.1
 Requires PHP:      5.2.4
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
@@ -97,7 +97,10 @@ This is a shortcode for log out button.
 
 == Changelog ==
 
-= 0.8.0 =
+= 0.9.1 =
+* Fix support WP version
+
+= 0.9.0 =
 * Bump support version to WordPress v5.9
 
 = 0.8.0 =
