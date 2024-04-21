@@ -8,9 +8,9 @@ Tags: firebase, wordpress
 
 Requires at least: 4.0.0
 
-Tested up to: 5.9
+Tested up to: 6.5.2
 
-Stable tag: 0.9.1
+Stable tag: 0.9.2
 
 Requires PHP: 5.2.4
 
