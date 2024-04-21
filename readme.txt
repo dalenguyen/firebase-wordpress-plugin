@@ -97,7 +97,7 @@ This is a shortcode for log out button.
 
 == Changelog ==
 
-= 0.9.1 =
+= 0.9.2 =
 * test support for WP v6.5.2
 
 = 0.9.1 =
