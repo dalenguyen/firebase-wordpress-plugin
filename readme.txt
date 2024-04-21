@@ -3,7 +3,7 @@ Contributors:      hanthuy
 Donate link:       https://www.paypal.me/DaleNguyen
 Tags:              firebase
 Requires at least: 4.0.0
-Tested up to:      5.9
+Tested up to:      6.5.2
 Stable tag:        0.9.1
 Requires PHP:      5.2.4
 License:           GPLv2 or later
@@ -96,6 +96,9 @@ This is a shortcode for log out button.
 2. Please enter collection names in order to show the data from Real Time Database
 
 == Changelog ==
+
+= 0.9.1 =
+* test support for WP v6.5.2
 
 = 0.9.1 =
 * Fix support WP version

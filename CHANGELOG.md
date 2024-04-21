@@ -2,9 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [ 0.9.2 ] - 21-04-2024
+
+- test support for WP v6.5.2
+
 ## [ 0.9.1 ] - 30-01-2022
 
 - Fix support WP version
+
 ## [ 0.9.0 ] - 30-01-2022
 
 - Bump support version to WordPress v5.9
