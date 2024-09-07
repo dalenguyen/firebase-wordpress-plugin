@@ -10,7 +10,7 @@ Requires at least: 4.0.0
 
 Tested up to: 6.5.2
 
-Stable tag: 0.9.2
+Stable tag: 0.9.3
 
 Requires PHP: 5.2.4
 
@@ -83,7 +83,7 @@ echo do_shortcode("[firebase_greetings]");
 You can show error message when a user cannot login by using a shortcode
 
 ```
-echo do_shortcode("[firebase_login_error class='your-class-name'][/firebase_login_error]");
+echo do_shortcode("[firebase_login_error class='your-optional-CSS-class-name'][/firebase_login_error]");
 ```
 
 ### How can I show data for a not logged in user?
@@ -91,7 +91,7 @@ echo do_shortcode("[firebase_login_error class='your-class-name'][/firebase_logi
 You can put your data as an HTML code inside a shortcode
 
 ```
-echo do_shortcode("[firebase_show_not_login class='your-class-name']YOUR HTML CODE[/firebase_show_not_login]");
+echo do_shortcode("[firebase_show_not_login class='your-optional-CSS-class-name']YOUR HTML CODE[/firebase_show_not_login]");
 ```
 
 ### How can I hide or show data for a logged in user?
@@ -99,7 +99,7 @@ echo do_shortcode("[firebase_show_not_login class='your-class-name']YOUR HTML CO
 You can put your data as an HTML code inside a shortcode
 
 ```
-echo do_shortcode("[firebase_show class='your-class-name']YOUR HTML CODE[/firebase_show]");
+echo do_shortcode("[firebase_show class='your-optional-CSS-class-name']YOUR HTML CODE[/firebase_show]");
 ```
 
 ### How can I show realtime database for a logged in user?
@@ -107,7 +107,7 @@ echo do_shortcode("[firebase_show class='your-class-name']YOUR HTML CODE[/fireba
 You can put your data as an HTML code inside a shortcode. Realtime data will be shown as a table with an id #if-realtime.
 
 ```
-echo do_shortcode("[realtime class='your-class-name' collection_name='string' document_name='string']");
+echo do_shortcode("[realtime class='your-optional-CSS-class-name' collection_name='string' document_name='string']");
 ```
 
 ### How can I log out?

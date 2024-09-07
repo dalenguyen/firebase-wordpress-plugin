@@ -16,7 +16,7 @@
  * Author URI:   http://dalenguyen.me
  * Contributors: Dale Nguyen (@dalenguyen)
  *
- * Version:      0.9.2
+ * Version:      0.9.3
  *
  * Text Domain:  integrate-firebase
  *
@@ -54,7 +54,7 @@ if (!function_exists('add_action')) {
     exit;
 }
 
-define('FIREBASE_WP_VERSION', '0.9.2');
+define('FIREBASE_WP_VERSION', '0.9.3');
 define('FIREBASE_WP__MINIMUM_WP_VERSION', '4.0.0');
 define('FIREBASE_WP__PLUGIN_DIR', plugin_dir_path(__FILE__));
 

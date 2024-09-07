@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [ 0.9.3 ] - 07-09-2024
+
+- update css wording
+
 ## [ 0.9.2 ] - 21-04-2024
 
 - test support for WP v6.5.2
