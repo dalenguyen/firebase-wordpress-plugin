@@ -61,7 +61,7 @@
     public static function firebase_show_func($atts, $content) {
       $class_name = "";
       if(isset($atts['class'])){
-        $class_name = $atts['class'];
+        $class_name = esc_attr($atts['class']);
       }
       $html = "";
       $html .= "<div class='firebase-show $class_name'>";
@@ -73,7 +73,7 @@
     public static function firebase_show_not_login_func($atts, $content) {
       $class_name = "";
       if(isset($atts['class'])){
-        $class_name = $atts['class'];
+        $class_name = esc_attr($atts['class']);
       }
       $html = "";
       $html .= "<div class='firebase-show-when-not-login $class_name'>";
@@ -85,7 +85,7 @@
     public static function firebase_login_error_func($atts) {
       $class_name = "";
       if(isset($atts['class'])){
-        $class_name = $atts['class'];
+        $class_name = esc_attr($atts['class']);
       }
       $html = "";
       $html .= "<div class='$class_name'>";
@@ -103,15 +103,15 @@
        $document_name = "";
 
        if(isset($atts['class'])){
-         $class_name = $atts['class'];
+         $class_name = esc_attr($atts['class']);
        }
 
        if(isset($atts['collection_name'])){
-         $collection_name = $atts['collection_name'];
+         $collection_name = esc_attr($atts['collection_name']);
        }
 
        if(isset($atts['document_name'])){
-         $document_name = $atts['document_name'];
+         $document_name = esc_attr($atts['document_name']);
        }
 
        $html = "";

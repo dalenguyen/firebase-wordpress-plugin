@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The initation loader for Firebase, and the main plugin file.
+ * The initiation loader for Firebase, and the main plugin file.
  *
  * @category     WordPress_Plugin
  * @package      integrate-firebase
@@ -16,7 +16,7 @@
  * Author URI:   http://dalenguyen.me
  * Contributors: Dale Nguyen (@dalenguyen)
  *
- * Version:      0.9.3
+ * Version:      0.10.0
  *
  * Text Domain:  integrate-firebase
  *
@@ -54,7 +54,7 @@ if (!function_exists('add_action')) {
     exit;
 }
 
-define('FIREBASE_WP_VERSION', '0.9.3');
+define('FIREBASE_WP_VERSION', '0.10.0');
 define('FIREBASE_WP__MINIMUM_WP_VERSION', '4.0.0');
 define('FIREBASE_WP__PLUGIN_DIR', plugin_dir_path(__FILE__));
 

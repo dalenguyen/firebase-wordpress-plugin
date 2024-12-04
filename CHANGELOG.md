@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [ 0.10.0 ] - 04-04-2024
+
+- update tested version
+- feedback from wordfence
+
 ## [ 0.9.3 ] - 07-09-2024
 
 - update css wording

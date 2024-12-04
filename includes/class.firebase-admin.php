@@ -53,15 +53,15 @@ class Firebase_Admin {
 
         wp_enqueue_script('firebase-admin', plugin_dir_url(dirname(__FILE__)) . 'js/firebase-admin.js', array('jquery'), FIREBASE_WP_VERSION, true);
         wp_localize_script('firebase-admin', 'firebaseDatabaseOptions', array(
-            'databaseType' => self::$options_database['database_type'],
-            'collections' => self::$options_database['collection_names'],
+            'databaseType' => self::$options_database['database_type'] ?? '',
+            'collections' => self::$options_database['collection_names'] ?? '',
         )
         );
         wp_localize_script('firebase-admin', 'firebaseOptions', array(
-            'apiKey' => self::$options['api_key'],
-            'authDomain' => self::$options['auth_domain'],
-            'databaseURL' => self::$options['database_url'],
-            'projectId' => self::$options['project_id'],
+            'apiKey' => self::$options['api_key'] ?? '',
+            'authDomain' => self::$options['auth_domain'] ?? '',
+            'databaseURL' => self::$options['database_url'] ?? '',
+            'projectId' => self::$options['project_id'] ?? '',
         )
         );
     }
